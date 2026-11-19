@@ -32,16 +32,15 @@ void checkx(double x){
     }
 }
 void checkeps(double eps){
-    if (!(isfinite(eps) && eps > 0)){
-        throw invalid_argument("epsilon must be more than 0");
-    }
     if (cin.fail()){
         throw invalid_argument("wrong eps");
     }
     if (cin.peek() != '\n'){
         throw invalid_argument("wrong eps");
     }
-
+    if (!(isfinite(eps) && eps > 0)){
+        throw invalid_argument("epsilon must be more than 0");
+    }
 }
 int main() {
     username();
