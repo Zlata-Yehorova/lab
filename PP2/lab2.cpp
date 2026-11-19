@@ -60,7 +60,7 @@ int main() {
         double calculate = s(x, eps);
         cout << "done"<< endl;
 
-        cout<< uppercase << scientific << setprecision (7) << "for x "<< x << endl;
+        cout << uppercase << scientific << setprecision (7) << "for x = "<< x << endl;
         cout << uppercase << scientific << setprecision (9) << "for eps = " << eps << endl;
         cout << fixed << setprecision(8) << "result " << calculate << endl;
     }
