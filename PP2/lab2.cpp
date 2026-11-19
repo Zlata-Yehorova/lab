@@ -21,14 +21,14 @@ double s(double x, double eps) noexcept{
     return sum;
 }
 void checkx(double x){
-    if (!(isfinite(x) && x >= -1 && x <= 1)){
-        throw invalid_argument("x must be in [-1, 1]");
+    if (cin.peek() != '\n'){
+        throw invalid_argument("wrong x");
     }
     if (cin.fail()){
         throw invalid_argument("wrong x");
     }
-    if (cin.peek() != '\n'){
-        throw invalid_argument("wrong x");
+    if (!(isfinite(x) && x >= -1 && x <= 1)){
+        throw invalid_argument("x must be in [-1, 1]");
     }
 }
 void checkeps(double eps){
